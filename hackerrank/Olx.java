@@ -8,7 +8,7 @@ class Olx
 {
 	static int n;
 	static String input[]=new String[n];
-	static String qn[][]=new String[n][5];
+	static String qn[][]=new String[n][4];
    	static String sn[][]=new String[n][4];
 
     public static void main(String[] args) 
