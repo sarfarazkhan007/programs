@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 import java.text.*;
-import java.math	.*;
+import java.math.*;
 import java.util.regex.*;
 
 class Olx 
@@ -61,8 +61,12 @@ class Olx
     	int numhold=0;
     	int dayshold=0;
     	int[] ar=new int[k-1];
-    	int days[]=new int[100];
-
+    	int[] ar1=new int[k-1];
+    	int[] ar2=new int[k-1];
+    	int[] ar3=new int[k-1];
+    	int[] days=new int[100];
+    	int counter;	
+  	
     	//if()
 
     	//System.out.println(Pattern.matches("[786]{1}[0-9]{9}", "9953038949"))
@@ -107,55 +111,70 @@ class Olx
   
     			else if(col==2)
     			{
+    				numhold=0;
     				if(!val)
     				{
-    					if(Pattern.matches("-1",q[row][col])){}
-    					else  if()
-    
-    				
-    					Pattern.matches(q[row][col]+"..",s[][])
+    					if(Pattern.matches("-1",q[row][col])){
+    						ar1=ar;
+    					}
+    					else if ()  
+    					{ 
+    						for(int r : ar)
+    						if(Pattern.matches(q[row][col]+"..",s[r][col]) || Pattern.matches(q[row][col],s[r][col]) )
+    						{
+    							ar1[numhold++]=r;
+    						}
+
+    					}
+    				}
+    				else
+    				{
+    					for(int r : ar)
+    						if(Pattern.matches(q[row][col],s[r][col]) )
+    						{
+    							ar1[numhold++]=r;
+    						}
     				}
 
     			}
+    			else if(col==3)
+    			{
+    				numhold=0;
+    				if(!val)
+    				{
+    					if(Pattern.matches("-1",q[row][col])){
+    						ar2=ar1;
+    						counter = ar2.length;
+
+    					}
+    					else if ()  
+    					{
+    						 
+    						for(int r : ar1)
+    						if(Pattern.matches(q[row][col]+"..",s[r][col]) || Pattern.matches(q[row][col],s[r][col]) )
+    						{
+    							ar2[numhold++]=r;
+    							counter++;
+    						}
+
+    					}
+    				}
+    				else
+    				{
+    					for(int r : ar1)
+    						if(Pattern.matches(q[row][col],s[r][col]) )
+    						{
+    							ar2[numhold++]=r;
+    							counter++;
+    						}
+    				}
+    			}
     		}
-    	
+    		System.out.print(counter);
+    		counter=0;
+    	}
 
-
-    	/*for (String [] x : qn)
-		{
-			// System.out.print(x + " ");
-		   for (String y : x)
-		   {
-		        System.out.print(y + " ");
-		   }
-		   System.out.println();
-		}
-
- 		System.out.println(Arrays.deepToString(qn));
- 		System.out.println(Arrays.deepToString(sn));
-
-    	System.out.println("\n end");
-
-
-    }
-    static boolean checkPoint(int c,String sub)
-    {
-    	return sub.contains(".");
-    }
-
-    
-*/
-    }
-
+	}
 }
 
 
-/*if(col==1)
-{
-	String result ="["+st+"]";
-	if(str1.equals(sn[r][1])
-			ar[k++]=r;
-	
-}
-
-	*/
