@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class Alphabet 
+{
+	public static void main(String[] args) 
+	{
+		String s;
+		int k;
+		
+		Scanner sc=new Scanner(System.in);
+		
+		s=sc.nextLine();
+		k=sc.nextInt();
+		s=s.toLowerCase();
+		s=s.replaceAll("\\s","");
+//		System.out.println(s);
+		char ar[]=s.toCharArray();
+//		System.out.println(ar[2]);
+//		System.out.println(++ar[2]);
+		
+		for(int i=0;i<ar.length;i++)
+		{ 
+//			if(ar[i]!=' '){
+			for(int j=i;j<i+k && j+1<ar.length /*&& ar[j+1]!=' '*/;j++)
+			{
+//				char t1=++ar[j];
+				char t2=ar[j+1];
+				char t3=ar[j];
+				System.out.println(" "+t3 +" "+t2);
+				if(ar[j]+1!=ar[j+1])
+				{
+					break;
+				}
+				if(j==i+k-1)
+				{
+					for(int a=i;a<i+k;a++)
+					{
+					//	System.out.print(ar[a]);
+					}
+					System.out.print(" ");
+				}	
+//			}
+			}
+		}
+				
+	}
+}
+
+	
+

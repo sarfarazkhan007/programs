@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Alphabet {
+	public static void main(String[] args) {
+		String s;
+		int k;
+		
+		Scanner sc=new Scanner(System.in);
+		
+		s=sc.nextLine();
+		k=sc.nextInt();
+		
+		char ar[]=s.toCharArray();
+
+	}
+
+}

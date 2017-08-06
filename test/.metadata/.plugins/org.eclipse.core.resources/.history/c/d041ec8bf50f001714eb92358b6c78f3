@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+//import javax.swing.JFrame;
+public class Hello 
+{
+
+	public static void main(String[] args) 
+	{
+		int a,n,c=0,p=0,csum=0,psum=0,ps=0,cs=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.print("type the first smallest number = ");
+		a=sc.nextInt();
+		System.out.print("type the second larger number = ");
+		n=sc.nextInt();
+		
+		for(int i=a;i<=n;i++)
+		{
+			for(int j=2;j<=i/2;j++)
+			{
+				if(i==2){
+					ps+=i;
+					break;
+				}
+				if(i%j==0)
+				{
+					cs+=i;
+					break;
+				}
+				else if(j==(int)i/2)
+				{
+				ps+=i;
+				}
+			}
+     	}
+//			for(int i=0;i<cs.length;i++){
+//				System.out.println(cs[i]);
+//				csum=csum+cs[i];
+//			}
+//			for(int i=0;i<ps.length;i++){
+//				System.out.println(ps[i]);
+//				psum=psum+ps[i];
+//			}
+//		System.out.print(csum +" "+psum);
+			System.out.print(cs + "     	"+ps);
+	}
+}
+
+/*
+clASS is template of abstract things
+
+if you have a public class in a sourcecode then save it 
+with that class name compulsory
+
+main method and static key word are syntactically not required but 
+logically required
+*/
+
+
+//path:-  Desktop/AllDesktop/javaprogram/test/GUI/src
